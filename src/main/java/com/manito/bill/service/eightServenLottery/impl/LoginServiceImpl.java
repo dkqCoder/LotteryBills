@@ -2,7 +2,7 @@ package com.manito.bill.service.eightServenLottery.impl;
 
 import com.manito.bill.common.Constants;
 import com.manito.bill.dao.eightSevenLottery.UserDao;
-import com.manito.bill.entry.eightSevenLottery.LoginEntry;
+import com.manito.bill.entry.eightSevenLottery.LoginOptQuery;
 import com.manito.bill.entry.eightSevenLottery.user.UserEntry;
 import com.manito.bill.service.eightServenLottery.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +24,10 @@ public class LoginServiceImpl implements LoginService{
     private UserDao userDao;
 
     @Override
-    public UserEntry getUserInfo(LoginEntry loginEntry,String lotteryAppKey) {
+    public UserEntry getUserInfo(LoginOptQuery loginOpt, String lotteryAppKey) {
         Map<String,String> headerMap = new HashMap<>();
         headerMap.put("Content-Type","application/json");
-        UserEntry userEntryPost = restTemplate.postForObject(loginUrl,loginEntry,UserEntry.class);
+        UserEntry userEntryPost = restTemplate.postForObject(loginUrl, loginOpt,UserEntry.class);
         userDao.saveUser(userEntryPost.getData(),"87");
         return userEntryPost;
     }
