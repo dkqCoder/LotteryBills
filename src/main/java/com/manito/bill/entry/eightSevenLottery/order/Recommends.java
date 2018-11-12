@@ -1,9 +1,9 @@
 package com.manito.bill.entry.eightSevenLottery.order;
 
-public class RecommendList {
+public class Recommends {
     private Long betId; // 订单id
     private Long recommendedUserId;
-    private String recommendUserName;
+    private String recommendedUser;
     private Long betAmount;
     private String betMode;
     private String declaration;
@@ -27,12 +27,12 @@ public class RecommendList {
         this.recommendedUserId = recommendedUserId;
     }
 
-    public String getRecommendUserName() {
-        return recommendUserName;
+    public String getRecommendedUser() {
+        return recommendedUser;
     }
 
-    public void setRecommendUserName(String recommendUserName) {
-        this.recommendUserName = recommendUserName;
+    public void setRecommendedUser(String recommendedUser) {
+        this.recommendedUser = recommendedUser;
     }
 
     public Long getBetAmount() {
@@ -88,7 +88,7 @@ public class RecommendList {
         return "RecommendList{" +
                 "betId=" + betId +
                 ", recommendedUserId=" + recommendedUserId +
-                ", recommendUserName='" + recommendUserName + '\'' +
+                ", recommendUserName='" + recommendedUser + '\'' +
                 ", betAmount=" + betAmount +
                 ", betMode='" + betMode + '\'' +
                 ", declaration='" + declaration + '\'' +

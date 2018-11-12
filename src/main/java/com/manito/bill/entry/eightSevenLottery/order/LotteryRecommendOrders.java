@@ -4,7 +4,7 @@ import java.util.List;
 
 public class LotteryRecommendOrders {
     private int count;
-    private List<RecommendList> data;
+    private List<Recommends> data;
 
     public int getCount() {
         return count;
@@ -14,11 +14,11 @@ public class LotteryRecommendOrders {
         this.count = count;
     }
 
-    public List<RecommendList> getData() {
+    public List<Recommends> getData() {
         return data;
     }
 
-    public void setData(List<RecommendList> data) {
+    public void setData(List<Recommends> data) {
         this.data = data;
     }
 

@@ -3,7 +3,7 @@ package com.manito.bill.dao.eightSevenLottery.pojo;
 public class LotteryRecommendDetail {
     private Long betId; // 订单id
     private Long recommendedUserId;
-    private String recommendUserName;
+    private String recommendedUser;
     private Long betAmount;
     private String betMode;
     private String declaration;
@@ -27,12 +27,12 @@ public class LotteryRecommendDetail {
         this.recommendedUserId = recommendedUserId;
     }
 
-    public String getRecommendUserName() {
-        return recommendUserName;
+    public String getRecommendedUser() {
+        return recommendedUser;
     }
 
-    public void setRecommendUserName(String recommendUserName) {
-        this.recommendUserName = recommendUserName;
+    public void setRecommendedUser(String recommendedUser) {
+        this.recommendedUser = recommendedUser;
     }
 
     public String getBetMode() {
