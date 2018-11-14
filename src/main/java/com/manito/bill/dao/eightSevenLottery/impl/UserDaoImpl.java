@@ -54,7 +54,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     @Transactional(readOnly = true)
     public List<LotteryUserInfo> getToken(String lotteryApp) {
-        StringBuilder sql = new StringBuilder(" SELECT n_id,n_user_id,n_user_name,n_token,n_lottery_app,n_insert_time,n_update_time " +
+        StringBuilder sql = new StringBuilder(" SELECT n_user_id,n_user_name,n_token,n_lottery_app,n_insert_time,n_update_time " +
                 " FROM user where n_lottery_app =?");
         List<LotteryUserInfo> lotteryUserInfoList = jdbcTemplate.query(sql.toString(),new Object[]{lotteryApp},new UserRowMapper());
         return lotteryUserInfoList;
@@ -65,7 +65,7 @@ public class UserDaoImpl implements UserDao {
         @Override
         public LotteryUserInfo mapRow(ResultSet resultSet, int i) throws SQLException {
             LotteryUserInfo lotteryUserInfo = new LotteryUserInfo();
-            lotteryUserInfo.setN_id(resultSet.getInt("n_id"));
+            lotteryUserInfo.setN_user_id(resultSet.getLong("n_user_id"));
             lotteryUserInfo.setN_user_name(resultSet.getString("n_user_name"));
             lotteryUserInfo.setN_token(resultSet.getString("n_token"));
             lotteryUserInfo.setN_lottery_app(resultSet.getString("n_lottery_app"));

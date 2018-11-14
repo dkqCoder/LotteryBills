@@ -6,6 +6,7 @@ public class QueryBaseOpt {
     private String appType;
     private String appVersion;
     private String umengchannel;
+    private String token;
 
     public String getAppPlatform() {
         return appPlatform;
@@ -37,5 +38,13 @@ public class QueryBaseOpt {
 
     public void setUmengchannel(String umengchannel) {
         this.umengchannel = umengchannel;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

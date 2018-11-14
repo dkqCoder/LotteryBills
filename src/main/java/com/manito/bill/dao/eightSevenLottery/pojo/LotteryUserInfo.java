@@ -1,7 +1,6 @@
 package com.manito.bill.dao.eightSevenLottery.pojo;
 
 public class LotteryUserInfo {
-    private Integer n_id;
     private Long n_user_id;
     private String n_user_name;
     private String n_token;
@@ -9,13 +8,6 @@ public class LotteryUserInfo {
     private String n_insert_time;
     private String n_update_tiem;
 
-    public Integer getN_id() {
-        return n_id;
-    }
-
-    public void setN_id(Integer n_id) {
-        this.n_id = n_id;
-    }
 
     public Long getN_user_id() {
         return n_user_id;
@@ -68,7 +60,6 @@ public class LotteryUserInfo {
     @Override
     public String toString() {
         return "LotteryUserInfo{" +
-                "n_id=" + n_id +
                 ", n_user_id=" + n_user_id +
                 ", n_user_name='" + n_user_name + '\'' +
                 ", n_token='" + n_token + '\'' +

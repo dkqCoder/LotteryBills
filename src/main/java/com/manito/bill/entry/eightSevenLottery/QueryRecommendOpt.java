@@ -1,12 +1,12 @@
 package com.manito.bill.entry.eightSevenLottery;
 
-public class QueryRecommendOptQuery extends QueryBaseOpt {
+public class QueryRecommendOpt extends QueryBaseOpt {
     private String desc;
     private Integer pageNo;
     private Integer pageSize;
     private String rForm;
     private String sid;
-    private String token;
+
 
     public String getDesc() {
         return desc;
@@ -48,11 +48,4 @@ public class QueryRecommendOptQuery extends QueryBaseOpt {
         this.sid = sid;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }

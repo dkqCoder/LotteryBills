@@ -1,6 +1,6 @@
 package com.manito.bill.entry.eightSevenLottery.order;
 
-public class Recommends {
+public class LotteryRecommends {
     private Long betId; // 订单id
     private Long recommendedUserId;
     private String recommendedUser;
@@ -10,6 +10,7 @@ public class Recommends {
     private Integer followNumber;
     private Double spValue;
     private String stopFollowDate;
+    private String pday;
 
     public Long getBetId() {
         return betId;
@@ -81,6 +82,14 @@ public class Recommends {
 
     public void setStopFollowDate(String stopFollowDate) {
         this.stopFollowDate = stopFollowDate;
+    }
+
+    public String getPday() {
+        return pday;
+    }
+
+    public void setPday(String pday) {
+        this.pday = pday;
     }
 
     @Override
